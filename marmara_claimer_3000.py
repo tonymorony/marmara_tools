@@ -34,3 +34,4 @@ for pubkey in pubkeys_to_clear:
         print(e)
         print(unlock_hash)
     print("Unlock txid: " + unlock_txid)
+    time.sleep(15)
