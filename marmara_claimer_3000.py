@@ -24,7 +24,7 @@ for pubkey in pubkeys_to_clear:
     subprocess.call(['./komodod', '-ac_name=MCL', '-ac_supply=2000000', '-ac_cc=2', '-addnode=37.148.210.158',
                      '-addnode=37.148.212.36', '-addressindex=1', '-spentindex=1', '-ac_marmara=1',
                      '-ac_staked=75', '-ac_reward=3000000000', '-pubkey='+pubkey, '-daemon'])
-    # dirty way, it's better to add function which will check if daemon is app
+    # dirty way, it's better to add function which will check if daemon is up
     time.sleep(30)
     mcl_proxy = def_credentials("MCL")
     unlock_hash = mcl_proxy.marmaraunlock(pubkeys_to_clear[pubkey])
